@@ -4,6 +4,9 @@ import com.yochiu.algorithms.code_interviews.data.ListNode;
 import jdk.nashorn.internal.ir.SplitReturn;
 import org.codehaus.groovy.ast.expr.SpreadExpression;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class RemoveNthFromEnd {
 
     public ListNode removeNthFromEnd(ListNode head, int n) {
@@ -24,6 +27,11 @@ public class RemoveNthFromEnd {
         }
         cur.next = cur.next.next;
         return node.next;
+    }
+
+    public static void main(String[] args) {
+        List<Integer> res = new ArrayList<>();
+        res.add(10);
     }
 
 }
