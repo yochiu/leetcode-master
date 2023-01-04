@@ -2,6 +2,9 @@ package com.yochiu.algorithms.code_interviews;
 
 import com.yochiu.algorithms.code_interviews.data.ListNode;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 给你一个头结点为 head 的单链表和一个整数 k ，请你设计一个算法将链表分隔为 k 个连续的部分。
  * 每部分的长度应该尽可能的相等：任意两部分的长度差距不能超过 1 。这可能会导致有些部分为 null 。
@@ -19,6 +22,30 @@ import com.yochiu.algorithms.code_interviews.data.ListNode;
 public class SplitListToParts {
 
     public ListNode[] splitListToParts(ListNode head, int x) {
-        return null;
+        int len = 0;
+        ListNode node = head;
+        while (node != null) {
+            len++;
+            node = node.next;
+        }
+        int subLen = len / x;
+        int k = len % x;
+
+        ListNode cur = head;
+        int count = 0;
+        List<ListNode> array = new ArrayList<>();
+        for (int i = 0; i < x; i++) {
+            ListNode p = cur;
+            for (int j = 0; j < subLen; j++) {
+                p = p.next;
+            }
+            if (count++ < k) {
+                p = p.next;
+            }
+            array.add(cur);
+            cur = p;
+        }
+
+        return array.toArray(new ListNode[]{});
     }
 }

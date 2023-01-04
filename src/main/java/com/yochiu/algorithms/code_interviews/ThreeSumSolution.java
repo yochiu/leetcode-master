@@ -1,9 +1,7 @@
 package com.yochiu.algorithms.code_interviews;
 
-import com.sun.org.apache.bcel.internal.generic.AllocationInstruction;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class ThreeSumSolution {
 
