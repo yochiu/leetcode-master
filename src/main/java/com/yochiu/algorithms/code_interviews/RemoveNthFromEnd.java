@@ -1,8 +1,6 @@
 package com.yochiu.algorithms.code_interviews;
 
 import com.yochiu.algorithms.code_interviews.data.ListNode;
-import jdk.nashorn.internal.ir.SplitReturn;
-import org.codehaus.groovy.ast.expr.SpreadExpression;
 
 import java.util.ArrayList;
 import java.util.List;
